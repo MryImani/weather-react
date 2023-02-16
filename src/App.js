@@ -11,6 +11,7 @@ import CurrentStatusTemperature from "./CurrentStatusTemperature";
 import NextDay from "./NextDay";
 import CityStatusTitle from "./CityStatusTitle";
 import "./styles.css";
+import Credits from "./Credits";
 export default function App() {
   return (
     <div>
@@ -105,6 +106,7 @@ export default function App() {
             src="/images/snowy.png"
             className="nextDay6"
           />
+          <Credits />
         </div>
       </div>
     </div>

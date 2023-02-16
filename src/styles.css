@@ -220,7 +220,17 @@ button {
   animation-delay: 0.75s;
   background-color: rgba(71, 75, 255, 0.5);
 }
-
+.credits {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: right;
+  font-size: 13px;
+  color: #fff;
+  z-index: 999999;
+}
 @keyframes spinner-4t3wzl {
   0% {
     transform: rotate(0deg) translateY(-200%);
@@ -269,7 +279,13 @@ button {
     padding: 0 2rem;
   }
 }
-
+@media (max-width: 992px) {
+  .credits {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
 @media only screen and (max-width: 576px) {
   .cityStatus {
     padding: 1rem 0;
