@@ -1,3 +1,4 @@
+import React from "react";
 export default function CityStatusTitle() {
   return (
     <div className="col-12 border-bottom border-dark-subtle pb-2 cityStatusTitle">
@@ -14,6 +15,7 @@ export default function CityStatusTitle() {
           className="btn-check"
           name="btnradio"
           id="btnradio1"
+          onClick={fToC}
           defaultChecked
         />
         <label className="btn btn-outline-primary" htmlFor="btnradio1">
@@ -25,6 +27,7 @@ export default function CityStatusTitle() {
           className="btn-check"
           name="btnradio"
           id="btnradio2"
+          onClick={cToF}
         />
         <label className="btn btn-outline-primary" htmlFor="btnradio2">
           °F

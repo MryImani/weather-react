@@ -1,3 +1,4 @@
+import React from "react";
 export default function CurrentStatusTemperature(props) {
   return (
     <div className="col-sm-1 col-6 currentStatusTemperature pt-3">

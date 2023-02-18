@@ -1,3 +1,4 @@
+import React from "react";
 import DateInDesktop from "./DateInDesktop";
 import Humidity from "./Humidity";
 import Time from "./Time";

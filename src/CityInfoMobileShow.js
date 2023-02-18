@@ -1,3 +1,4 @@
+import React from "react";
 import Humidity from "./Humidity";
 import Wind from "./Wind";
 import DateInMobile from "./DateInMobile";

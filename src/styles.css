@@ -44,11 +44,11 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
-.cityInfo {
+.weatherInfo {
   padding: 3rem;
   flex-grow: 1;
 }
-.cityInfo ul {
+.weatherInfo ul {
   padding: 1rem 1rem 0;
 }
 .dateMobileShow .date {
@@ -104,7 +104,7 @@ button {
   border-bottom-left-radius: 0px;
 }
 
-.cityStatus {
+.weatherStatus {
   padding: 1rem 0 2rem;
   background-color: #353b49;
   opacity: 0.9;
@@ -287,7 +287,7 @@ button {
   }
 }
 @media only screen and (max-width: 576px) {
-  .cityStatus {
+  .weatherStatus {
     padding: 1rem 0;
   }
   .container {
