@@ -33,7 +33,7 @@ export default function WeatherStatus(props) {
             className="btn-check"
             name="btnradio"
             id="btnradio1"
-            onClick={fToC(temperature)}
+            //onClick={fToC(temperature)}
             defaultChecked
           />
           <label className="btn btn-outline-primary" htmlFor="btnradio1">
@@ -45,7 +45,7 @@ export default function WeatherStatus(props) {
             className="btn-check"
             name="btnradio"
             id="btnradio2"
-            onClick={cToF(temperature)}
+            //onClick={cToF(temperature)}
           />
           <label className="btn btn-outline-primary" htmlFor="btnradio2">
             °F

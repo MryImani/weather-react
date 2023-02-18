@@ -6,9 +6,9 @@ import getTheme from "./getTheme";
 import getDateAndTime from "./getDateAndTime";
 import axios from "axios";
 export default function Weather() {
-  let [weather, setWeather] = useState({});
-  let [loaded, setLoaded] = useState(false);
-  let [value, setValue] = useState({});
+  const [weather, setWeather] = useState({});
+  const [loaded, setLoaded] = useState(false);
+  const [value, setValue] = useState("Mashhad");
   function updateCity(event) {
     event.preventDefault();
     setValue(event.target.value);
@@ -41,15 +41,15 @@ export default function Weather() {
               new Date(response.data.time * 1000)
             ),
           });
-          // document.querySelector(
-          //   ".theme"
-          // ).style.backgroundImage = `linear-gradient(black, black),${
-          //   getTheme(response.data.condition.description.toLowerCase())
-          //     .backgroundUrl
-          // }`;
-          // document.querySelector(".container").style.backgroundImage = getTheme(
-          //   response.data.condition.description.toLowerCase()
-          // ).backgroundUrl;
+          document.querySelector(
+            ".theme"
+          ).style.backgroundImage = `linear-gradient(black, black),${
+            getTheme(response.data.condition.description.toLowerCase())
+              .backgroundUrl
+          }`;
+          document.querySelector(".container").style.backgroundImage = getTheme(
+            response.data.condition.description.toLowerCase()
+          ).backgroundUrl;
           setLoaded(true);
         });
     } else {
@@ -88,7 +88,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    SearchCity("Mashhad");
+    SearchCity(value);
     return <PreLoader />;
   }
 }
