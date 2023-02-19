@@ -7,16 +7,7 @@ import Credits from "./Credits";
 export default function WeatherStatus(props) {
   let [temperature, setTemperature] = useState(props.data.temperature);
   let [temperatureUnit, setTemperatureUnit] = useState("°C");
-  function cToF(celsius) {
-    var cTemp = celsius;
-    setTemperature(Math.floor((cTemp * 9) / 5 + 32));
-    setTemperatureUnit("°F");
-  }
-  function fToC(fahrenheit) {
-    var fTemp = fahrenheit;
-    setTemperature(Math.ceil(((fTemp - 32) * 5) / 9));
-    setTemperatureUnit("°C");
-  }
+
   return (
     <div className="row weatherStatus">
       <div className="col-12 border-bottom border-dark-subtle pb-2 cityStatusTitle">
@@ -33,7 +24,10 @@ export default function WeatherStatus(props) {
             className="btn-check"
             name="btnradio"
             id="btnradio1"
-            //onClick={fToC(temperature)}
+            onClick={() => {
+              setTemperature(props.data.temperature);
+              setTemperatureUnit("°C");
+            }}
             defaultChecked
           />
           <label className="btn btn-outline-primary" htmlFor="btnradio1">
@@ -45,7 +39,10 @@ export default function WeatherStatus(props) {
             className="btn-check"
             name="btnradio"
             id="btnradio2"
-            //onClick={cToF(temperature)}
+            onClick={() => {
+              setTemperature(Math.floor((temperature * 9) / 5 + 32));
+              setTemperatureUnit("°F");
+            }}
           />
           <label className="btn btn-outline-primary" htmlFor="btnradio2">
             °F
